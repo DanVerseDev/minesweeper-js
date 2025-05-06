@@ -334,7 +334,7 @@ footer>a>img {
     color: white;
 }
 
-#unlucky {
-    color: blue;
+#wifemode {
+    text-decoration: underline;
     cursor: pointer;
 }
