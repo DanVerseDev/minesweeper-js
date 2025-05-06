@@ -288,11 +288,13 @@ function updateFlagCounter() {
 }
 
 /**
- * Makes the game impossible to win
+ * Toggles whether the game is impossible to win
  */
 function feelingLucky() {
-    unlucky = true
+    unlucky = !unlucky
     toggleHelp()
+    let newMessage = "Feeling " + (unlucky ? "unlucky" : "lucky") + "?"
+    document.getElementById("unlucky").innerText = newMessage
 }
 
 /**
