@@ -63,7 +63,6 @@ function displayGrid() {
  */
 function closeWindow() {
     resetGame()
-    unlucky = false
     let window = document.getElementById("game_window")
     window.classList.toggle("hidden")
     difficulty = difficulty_presets.easy

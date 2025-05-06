@@ -25,7 +25,7 @@ let difficulty_presets = {
 let difficulty = difficulty_presets.easy
 let playing = true
 let firstClick = true
-let unlucky = false
+let wifemode = false
 
 /**
  * Sets difficulty of the game.
@@ -159,7 +159,7 @@ function clickSquare(x, y) {
  */
 function clickButton(x, y) {
     if (firstClick) {
-        while (unlucky != grid[x][y].isMine) {
+        while (wifemode != grid[x][y].isMine) {
             createGrid()
             placeMines()
         }
@@ -290,11 +290,10 @@ function updateFlagCounter() {
 /**
  * Toggles whether the game is impossible to win
  */
-function feelingLucky() {
-    unlucky = !unlucky
-    toggleHelp()
-    let newMessage = "Feeling " + (unlucky ? "unlucky" : "lucky") + "?"
-    document.getElementById("unlucky").innerText = newMessage
+function wifeMode() {
+    wifemode = !wifemode
+    let newMessage = "Wife mode: " + (wifemode ? "ON" : "OFF")
+    document.getElementById("wifemode").innerText = newMessage
 }
 
 /**
